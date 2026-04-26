@@ -2716,13 +2716,14 @@
     }
 
     @media(max-width:768px) {
+      /* 📱 TABLET & SMALL LAPTOPS (481px - 768px) */
       :root {
         --py: 64px;
       }
 
       #nav,
       #nav.sc {
-        padding: 15px 20px;
+        padding: 15px 32px;
       }
 
       .nav-links {
@@ -2736,16 +2737,90 @@
       .wrap,
       .hero-in,
       .id-in {
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 24px;
+        padding-right: 24px;
       }
 
-      .proj-grid {
+      /* Projects & Competitions - Tablet: 2 columns */
+      .proj-grid, .comp-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        overflow-x: visible;
+        padding: 0;
+        margin: 0;
+        gap: 16px;
+      }
+
+      .proj-grid .proj-card, .comp-grid .proj-card {
+        flex: auto;
+        min-width: auto;
+      }
+
+      .td-grid, .skill-g {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .cs-node {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .mto {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media(max-width:480px) {
+      /* 📲 MOBILE (320px - 480px) PRIMARY FOCUS */
+      :root {
+        --py: 48px;
+        --max: 100vw;
+      }
+
+      #nav,
+      #nav.sc {
+        padding: 12px 16px;
+      }
+
+      .wrap,
+      .hero-in,
+      .id-in {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+      
+      .ttl {
+        font-size: clamp(28px, 8vw, 36px);
+      }
+      
+      .ct-h {
+        font-size: clamp(28px, 8vw, 40px);
+      }
+      
+      .sub {
+        font-size: 14.5px;
+        margin-bottom: 32px;
+      }
+
+      /* Projects & Competitions - Mobile: 1 column */
+      .proj-grid, .comp-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .td-grid, .skill-g, .work-grid {
         grid-template-columns: 1fr;
       }
 
-      .td-grid {
+      .exp-card {
         grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 18px;
+      }
+      
+      .exp-card-img {
+        height: auto;
+        aspect-ratio: 16/9;
       }
 
       /* Journey mobile: single-column, spine on left */
@@ -2756,6 +2831,7 @@
 
       .tl-e {
         grid-template-columns: 40px 1fr;
+        gap: 12px;
       }
 
       /* All cards go in column 2 */
@@ -2784,7 +2860,7 @@
       }
 
       .tl-img-sm {
-        padding: 24px 24px 0 !important;
+        padding: 16px 16px 0 !important;
       }
 
       .tl-card-img-inner {
@@ -2795,17 +2871,20 @@
         padding: 14px 16px 16px;
       }
 
-      .work-grid {
-        grid-template-columns: 1fr;
+      /* Buttons & touch inputs */
+      .btn {
+        padding: 12px 20px;
+        justify-content: center;
       }
-
-      .cs-node {
-        grid-template-columns: 1fr;
-        gap: 10px;
+      
+      .h-ctas, .ct-acts {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
       }
-
-      .mto {
-        grid-template-columns: 1fr;
+      
+      .h-ctas .btn {
+        width: 100%;
       }
     }
   </style>
@@ -3645,8 +3724,8 @@
                 <i data-lucide="mail" style="width:17px;height:17px"></i>
                 <span>devendrajeswani55@gmail.com</span>
               </a>
-              <a href="https://linkedin.com/in/devendra-jeswani" target="_blank" rel="noopener" class="cl"
-                id="c-linkedin">
+              <a href="https://www.linkedin.com/in/devendra-jeswani-b63388294/" target="_blank" rel="noopener"
+                class="cl" id="c-linkedin">
                 <i data-lucide="linkedin" style="width:17px;height:17px"></i>
                 <span>LinkedIn</span>
               </a>
